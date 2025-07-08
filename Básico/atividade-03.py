@@ -1,8 +1,3 @@
-#############
-# Básico
-#############
-
-
 # 3. Verificador de Números impares ou pares
 print("===Verificador de números Impares ou Pares===")
 while (True):

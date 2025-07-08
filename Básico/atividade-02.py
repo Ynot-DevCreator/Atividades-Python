@@ -1,7 +1,3 @@
-#############
-# Básico
-#############
-
 # 2. Operações Aritméticas Simples
 print("===Calculadora Simples===")
 n1 = int(input('Digite um número: '))

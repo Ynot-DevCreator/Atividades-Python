@@ -1,7 +1,3 @@
-#############
-# Básico
-#############
-
 # 4. Calcular Média de Notas
 print("===Calculador de média de Notas===")
 aluno = input('Informe o nome do Aluno(a): ')
