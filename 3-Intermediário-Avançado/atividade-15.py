@@ -1,5 +1,5 @@
 # Mostrar Números primos de 1 A 100
-print("===Números Primos de 1 a 100===")
+print("=== Números Primos de 1 a 100 ===")
 numeros= list(range(1, 101))
 for i in numeros: # percorre os numeros de 1 a 100
     p=0
