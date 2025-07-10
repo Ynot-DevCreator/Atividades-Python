@@ -5,7 +5,7 @@ opcao = int(input('\t=== Jogo da Adivinhação ===\n\nEsse é um Jogo de Adivinh
       +' e VOCÊ deve acertar qual é esse número.\n\n\t===Deseja Iniciar O Jogo?===\n\t\t1-Sim 2-Não\n\t============================\n'))
 if opcao != 2:
     while True:
-        numero = random.randrange(0, 11)
+        numero = random.randint(1, 10)
         # print(numero)
         while True:
             resposta = int(input('Qual o seu palpite: '))
