@@ -3,20 +3,81 @@ import random
 print("=== Jogo da Forca ===")
 
 palavras = ["Bandeira", "Abacaxi", "Computador", "Simulação", "Palíndromo", "Repositório", "Relâmpago", "Algoritmo", "Guaxinim", "Ornitorrinco"]
-
-bonecocompleto = '''  
+letras_usuario = []
+chances = 6
+erros = 0
+bonecos = ['''  
+     _________
+     |       |
+     |       
+     |      
+     |      
+    _|_
+''', '''  
+     _________
+     |       |
+     |       O
+     |      
+     |      
+    _|_
+''', '''  
+     _________
+     |       |
+     |       O
+     |       |
+     |      
+    _|_
+''', '''  
+     _________
+     |       |
+     |       O
+     |      /|
+     |      
+    _|_
+''', '''  
+     _________
+     |       |
+     |       O
+     |      /|\\
+     |      
+    _|_
+''', '''  
+     _________
+     |       |
+     |       O
+     |      /|\\
+     |      / 
+    _|_
+''', '''  
      _________
      |       |
      |       O
      |      /|\\
      |      / \\
-    _|_'''
-print(bonecocompleto)
+    _|_
+''']
+ganhou = False  
+# print(bonecos[0])
+pEscolhida = random.choice(palavras)
 while True:
-    opcao = int(input("Deseja Iniciar o Jogo? 1-Sim 2-Não"))
-    if opcao !=1:
-        break
-    else:
-        pEscolhida = random.choice(palavras)
-        oculta = ' _' * len(pEscolhida)
-        print(oculta)
+        for letra in pEscolhida.lower():
+            if letra.lower() in letras_usuario:
+                print(letra, end=" ")
+            else:
+                print("_", end=" ")
+        print(f"\nVocê tem {chances} chances\n\t {bonecos[erros]}")
+        tentativa = input("Escolha uma letra para Adivinhar: ")
+        letras_usuario.append(tentativa.lower())
+        if tentativa.lower() not in pEscolhida.lower():
+            chances -= 1
+            erros += 1
+        ganhou = True
+        for letra in pEscolhida:
+            if letra.lower() not in letras_usuario:
+                ganhou = False
+        if chances == 0 or ganhou:
+            break
+if ganhou:
+    print(f"Parabéns Você Ganhou!! A palavra era: {pEscolhida}")
+else:
+    print(f"Você Perdeu! A palavra era: {pEscolhida}\n{bonecos[-1]}")
