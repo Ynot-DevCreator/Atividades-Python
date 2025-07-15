@@ -2,7 +2,7 @@ import random
 # Jogo da Forca
 print("=== Jogo da Forca ===")
 
-palavras = ["Bandeira", "Abacaxi", "Computador", "Simulação", "Palíndromo", "Repositório", "Relâmpago", "Algoritmo", "Guaxinim", "Ornitorrinco"]
+palavras = ["Bandeira", "Abacaxi", "Computador", "Simulação", "Palíndromo", "Repositório", "Relâmpago", "Algoritmo", "Guaxinim", "Ornitorrinco", "Geladeira", "Crônometro"]
 letras_usuario = []
 chances = 6
 erros = 0
