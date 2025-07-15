@@ -34,7 +34,7 @@ identificador = 1
 
 def removerCliente(cliente):
     visualizarLista(cliente)
-    deletar = int(input('Qual Cliente Deseja Remover? (Remoção por ID)\n'))
+    deletar = int(input('\nQual Cliente Deseja Remover? (Remoção por ID)\n'))
     try: 
         del cliente[deletar]
     except KeyError:
