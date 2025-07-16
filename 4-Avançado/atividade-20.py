@@ -1,7 +1,6 @@
 # 20. Calculadora de Média de Números em Arquivo
 # ==============================================
 # Variáveis
-
 arquivoTxt = "C:\\Users\Aluno\\Desktop\\Atividades python\\4-Avançado\\listaNumeros.txt"
 cont = 0
 soma = 0
